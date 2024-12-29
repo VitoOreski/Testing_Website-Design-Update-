@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/moai.png">
+    <title>Other's</title>
+</head>
+<body style="background-color: darkgray;">
+    <h1 style="color: darkblue;"><span style="background-color: lightblue;border-radius:10px;padding: 15px 10px;outline: auto;">-Other's-</span></h1>
+    <button onclick="ClickButton()">Click Button</button>
+    <script>
+        function ClickButton(){
+            document.getElementById("Button1").innerHTML = "Button Clicked"
+        }
+    </script>
+    <button onclick="UnClickButton()">UnClick Button</button>
+    <script>
+        function UnClickButton(){
+            document.getElementById("Button1").innerHTML = "Button not Clicked"
+        }
+    </script>
+    <p id="Button1">Button not Clicked</p>
+    <hr><br>
+    <label>Text: </label>
+    <input id="InputText" placeholder="Hello World!" required><br><br>
+    <button id="MyLog">Log to console</button>
+    <button id="MyAlert">Alert the text</button>
+    <button id="MyText">Change the text below</button>
+    <script>
+        document.getElementById("MyLog").onclick = function(){
+            L = document.getElementById("InputText").value;
+            console.log(L);
+        }
+        document.getElementById("MyAlert").onclick = function(){
+            L = document.getElementById("InputText").value;
+            window.alert(L);
+        }
+        document.getElementById("MyText").onclick = function(){
+            L = document.getElementById("InputText").value;
+            document.getElementById("TextBelow").textContent = L
+        }
+    </script>
+    <p id="TextBelow">Invalid</p>
+    <hr>
+    <a href="index.html" style="text-decoration: none;" title="Main Page">
+        <h3><span style="background-color: darkred;border-radius: 10px;padding: 5px 15px;color: white;outline: auto;">Go back to the main page</span></h3>
+    </a>
+</body>
+</html>
